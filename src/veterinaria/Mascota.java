@@ -6,7 +6,7 @@ package veterinaria;
 
 /**
  *
- * @author Jesus Mena
+ * @author Jeshua Mena
  */
 public class Mascota {
 
@@ -63,19 +63,21 @@ public class Mascota {
         this.peso = peso;
     }
 
-    public void mostrarResumen() {
-        System.out.println("Mascota: " + nombre);
-        System.out.println("Especie: " + especie);
-        System.out.println("Edad: " + edad);
-        System.out.printf("Peso: %.2f kg%n", peso);
-
-    }
-
     public Cliente getDuenio() {
         return duenio;
     }
 
     public void setDuenio(Cliente duenio) {
         this.duenio = duenio;
+    }
+
+    public void mostrarResumen() {
+        System.out.println("Mascota: " + nombre);
+        System.out.println("Especie: " + especie);
+        System.out.println("Edad: " + edad);
+        System.out.printf("Peso: %.2f kg%n", peso);
+        if (this.duenio != null) {
+            System.out.println("Dueño: " + this.duenio.getNombre());
+        }
     }
 }
