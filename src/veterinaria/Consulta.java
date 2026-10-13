@@ -8,7 +8,7 @@ package veterinaria;
  *
  * @author Jeshua Mena
  */
-public class Consulta {
+public class Consulta implements Resumible {
 
     private String fecha;
     private String motivo;
@@ -45,7 +45,7 @@ public class Consulta {
     public void setVeterinario(Veterinario veterinario) {
         this.veterinario = veterinario;
     }
-    
+
     public String getFecha() {
         return fecha;
     }
@@ -87,11 +87,16 @@ public class Consulta {
         this.motivo = motivo;
     }
 
+    @Override
     public void mostrarResumen() {
         System.out.println("Fecha: " + fecha);
         System.out.println("Motivo: " + motivo);
-        if (mascota != null) mascota.mostrarResumen();
-        if (veterinario != null) System.out.println(veterinario.getNombre());
+        if (mascota != null) {
+            mascota.mostrarResumen();
+        }
+        if (veterinario != null) {
+            System.out.println(veterinario.getNombre());
+        }
         System.out.printf("Costo: ¢ %.2f%n", costo);
     }
 

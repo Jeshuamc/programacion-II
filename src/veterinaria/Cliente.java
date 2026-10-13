@@ -8,12 +8,13 @@ package veterinaria;
  *
  * @author Jeshua Mena
  */
-public class Cliente extends Persona{
+public class Cliente extends Persona {
+
     private String identificacion;
     private String telefono;
 
     public Cliente(String identificacion, String nombre, String telefono) {
-        super (nombre);
+        super(nombre);
         this.identificacion = identificacion;
         this.telefono = telefono;
     }
@@ -42,4 +43,10 @@ public class Cliente extends Persona{
         }
     }
 
+    @Override
+    public void mostrarResumen() {
+        System.out.println("Identificacion: " + identificacion);
+        System.out.println("Nombre: " + super.nombre);
+        System.out.println("Telefono: " + telefono);
+    }
 }

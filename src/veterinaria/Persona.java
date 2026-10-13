@@ -8,8 +8,8 @@ package veterinaria;
  *
  * @author Jeshua Mena
  */
-public abstract class Persona {
-    
+public abstract class Persona implements Resumible {
+
     protected String nombre;
 
     public Persona(String nombre) {
