@@ -6,7 +6,7 @@ package veterinaria;
 
 /**
  *
- * @author Jeshua Mena
+ * @author Jeshua Mena.
  */
 public class Cliente extends Persona {
 
